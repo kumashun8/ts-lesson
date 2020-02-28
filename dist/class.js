@@ -12,6 +12,7 @@ class Person {
     }
     greeting() {
         console.log(`Hello! My name is ${this.name}. I am ${this.age} years old.`);
+        this.explainJob();
     }
 }
 Person.species = 'Homo sapiens';
@@ -19,6 +20,9 @@ class Teacher extends Person {
     constructor(name, age, _subject) {
         super(name, age);
         this._subject = _subject;
+    }
+    explainJob() {
+        console.log(`I am a teacher and I teach ${this.subject}.`);
     }
     get subject() {
         if (!this._subject) {
@@ -32,8 +36,6 @@ class Teacher extends Person {
         }
         this._subject = value;
     }
-    greeting() {
-        console.log(`Hello! My name is ${this.name}. I am ${this.age} years old. I teach ${this.subject}`);
-    }
 }
-console.log(Teacher.species);
+const teacher = new Teacher('Quill', 38, 'Math');
+teacher.greeting();
