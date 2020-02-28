@@ -6,7 +6,14 @@ var single = '';
 var double = '';
 var back = "";
 var person = {
-    name: 'Jack',
+    name: {
+        first: 'Jack',
+        last: 'Smith'
+    },
     age: 21
 };
-console.log(person.age);
+var fruits = ['Apple', 'Banana', 'Grape', 1];
+var fruit = fruits[0];
+var book = ['business', 1500, false];
+book.push(21);
+console.log(book);
