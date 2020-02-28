@@ -61,3 +61,4 @@ function sayHello(): void {
   return;
 }
 console.log(sayHello());
+let tmp: undefined;
