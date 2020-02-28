@@ -11,6 +11,11 @@ class Person {
         console.log(`Hello! My name is ${this.name}. I am ${this.age} years old.`);
     }
 }
-const quill = new Person('Quill', 38);
-quill.incrementAge();
-quill.greeting();
+class Teacher extends Person {
+    constructor(name, age, subject) {
+        super(name, age);
+        this.subject = subject;
+    }
+}
+const teacher = new Teacher('Quill', 38, 'Math');
+teacher.greeting();
