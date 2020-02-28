@@ -1,3 +1,3 @@
-let hi = 'hi';
-// hoge
+"use strict";
+let hi = 32;
 console.log(hi.toUpperCase());
