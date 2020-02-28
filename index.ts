@@ -60,7 +60,6 @@ function sayHello(): void {
   console.log('hello');
   return;
 }
-console.log(sayHello());
 let tmp: undefined;
 
 const anotherAdd = add;
@@ -68,3 +67,12 @@ anotherAdd(2, 3);
 
 // const functionName: (arg: argType) => returnType = arg => func(arg)
 const doubleNumber: (num: number) => number = num => num * 2;
+
+function doubleAndHandle(num: number, cb: (num: number) => number): void {
+  const doubleNumber = cb(num * 2);
+  console.log(doubleNumber);
+}
+
+doubleAndHandle(21, doubleNumber => {
+  return doubleNumber;
+});

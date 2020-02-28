@@ -26,7 +26,6 @@ var coffee = {
     hot: true,
     size: CoffeeSize.TALL
 };
-console.log(coffee.size);
 var anything = true;
 anything = ['hoge', 1, 2];
 anything = {};
@@ -46,5 +45,18 @@ function add(num1, num2) {
 }
 function sayHello() {
     console.log('hello');
+    return;
 }
 console.log(sayHello());
+var tmp;
+var anotherAdd = add;
+anotherAdd(2, 3);
+// const functionName: (arg: argType) => returnType = arg => func(arg)
+var doubleNumber = function (num) { return num * 2; };
+function doubleAndHandle(num, cb) {
+    var doubleNumber = cb(num * 2);
+    console.log(doubleNumber);
+}
+doubleAndHandle(21, function (doubleNumber) {
+    return doubleNumber;
+});
