@@ -76,3 +76,12 @@ function doubleAndHandle(num: number, cb: (num: number) => number): void {
 doubleAndHandle(21, doubleNumber => {
   return doubleNumber;
 });
+
+let unknownInput: unknown;
+let anyInput: any;
+let text: string;
+unknownInput = 'hello';
+text = anyInput;
+if (typeof unknownInput === 'string') {
+  text = unknownInput;
+}
