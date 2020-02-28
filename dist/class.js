@@ -16,6 +16,9 @@ class Teacher extends Person {
         super(name, age);
         this.subject = subject;
     }
+    greeting() {
+        console.log(`Hello! My name is ${this.name}. I am ${this.age} years old. I teach ${this.subject}`);
+    }
 }
 const teacher = new Teacher('Quill', 38, 'Math');
 teacher.greeting();
