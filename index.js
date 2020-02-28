@@ -33,5 +33,11 @@ anything = {};
 anything.name = 'taro';
 var banana = 'banana';
 banana = anything;
-var unionType = 10;
-unionType = 'hello';
+var unionTypes = [10, 'hoge'];
+var apple = 'apple';
+var clothSize = 'small';
+var cloth = {
+    color: 'white',
+    size: clothSize
+};
+cloth.size = 'large';

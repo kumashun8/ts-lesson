@@ -39,4 +39,15 @@ anything.name = 'taro';
 let banana: string = 'banana';
 banana = anything;
 
-let unionType: (number | string)[] = [10, 'hoge'];
+let unionTypes: (number | string)[] = [10, 'hoge'];
+
+const apple = 'apple';
+let clothSize: 'small' | 'medium' | 'large' = 'small';
+const cloth: {
+  color: string;
+  size: 'small' | 'medium' | 'large';
+} = {
+  color: 'white',
+  size: clothSize,
+};
+cloth.size = 'large';
