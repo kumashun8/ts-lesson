@@ -57,7 +57,7 @@ function add(num1: number, num2: number) {
 }
 
 function sayHello(): void {
-  console.log('hello');
+  //console.log('hello');
   return;
 }
 let tmp: undefined;
@@ -70,7 +70,7 @@ const doubleNumber: (num: number) => number = num => num * 2;
 
 function doubleAndHandle(num: number, cb: (num: number) => number): void {
   const doubleNumber = cb(num * 2);
-  console.log(doubleNumber);
+  //console.log(doubleNumber);
 }
 
 doubleAndHandle(21, doubleNumber => {
@@ -85,3 +85,8 @@ text = anyInput;
 if (typeof unknownInput === 'string') {
   text = unknownInput;
 }
+
+function error(message: string) {
+  throw new Error(message);
+}
+console.log(error('This is an error.'));
