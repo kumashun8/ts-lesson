@@ -31,3 +31,10 @@ const coffee = {
   size: CoffeeSize.TALL,
 };
 console.log(coffee.size);
+
+let anything: any = true;
+anything = ['hoge', 1, 2];
+anything = {};
+anything.name = 'taro';
+let banana: string = 'banana';
+banana = anything;
