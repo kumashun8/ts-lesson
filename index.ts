@@ -62,3 +62,9 @@ function sayHello(): void {
 }
 console.log(sayHello());
 let tmp: undefined;
+
+const anotherAdd = add;
+anotherAdd(2, 3);
+
+// const functionName: (arg: argType) => returnType = arg => func(arg)
+const doubleNumber: (num: number) => number = num => num * 2;
