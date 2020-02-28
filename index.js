@@ -41,3 +41,10 @@ var cloth = {
     size: 'small'
 };
 cloth.size = 'large';
+function add(num1, num2) {
+    return num1 + num2;
+}
+function sayHello() {
+    console.log('hello');
+}
+console.log(sayHello());
