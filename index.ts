@@ -41,13 +41,14 @@ banana = anything;
 
 let unionTypes: (number | string)[] = [10, 'hoge'];
 
+type ClothSize = 'small' | 'medium' | 'large';
 const apple = 'apple';
-let clothSize: 'small' | 'medium' | 'large' = 'small';
+let clothSize: ClothSize = 'small';
 const cloth: {
   color: string;
-  size: 'small' | 'medium' | 'large';
+  size: ClothSize;
 } = {
   color: 'white',
-  size: clothSize,
+  size: 'small',
 };
 cloth.size = 'large';

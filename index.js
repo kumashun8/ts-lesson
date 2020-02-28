@@ -38,6 +38,6 @@ var apple = 'apple';
 var clothSize = 'small';
 var cloth = {
     color: 'white',
-    size: clothSize
+    size: 'small'
 };
 cloth.size = 'large';
