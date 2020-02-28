@@ -1,6 +1,7 @@
-let hello: string = 'hello';
-console.log(hello);
-
-function add(a: number, b: number): number {
-  return a + b;
-}
+let hasValue: boolean = true;
+let count: number = 10;
+let float: number = 3.14;
+let negative: number = -1.11;
+let single: string = '';
+let double: string = '';
+let back: string = ``;
