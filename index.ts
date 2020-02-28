@@ -38,3 +38,5 @@ anything = {};
 anything.name = 'taro';
 let banana: string = 'banana';
 banana = anything;
+
+let unionType: (number | string)[] = [10, 'hoge'];

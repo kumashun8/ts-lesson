@@ -27,3 +27,11 @@ var coffee = {
     size: CoffeeSize.TALL
 };
 console.log(coffee.size);
+var anything = true;
+anything = ['hoge', 1, 2];
+anything = {};
+anything.name = 'taro';
+var banana = 'banana';
+banana = anything;
+var unionType = 10;
+unionType = 'hello';
