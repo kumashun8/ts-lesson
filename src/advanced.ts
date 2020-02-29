@@ -19,12 +19,16 @@ type NumberBoolean = number | boolean;
 type StringNumber = string | number;
 type Mix = NumberBoolean & StringNumber;
 
+function toUpperCase(x: string): string;
+function toUpperCase(x: number): number;
 function toUpperCase(x: string | number) {
   if (typeof x === 'string') {
     return x.toUpperCase();
   }
-  return '';
+  return x;
 }
+const upperHello = toUpperCase('hello');
+upperHello;
 
 type NomadWorker = Engineer | Blogger;
 function describeProfile(nomadWorker: NomadWorker) {
@@ -81,4 +85,3 @@ const designer: Designer = {
   role: 'afa',
 };
 designer.hoge = 'hoge';
-console.log(designer.fafa);
