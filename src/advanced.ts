@@ -71,10 +71,10 @@ function havePet(pet: Pet) {
 }
 havePet(new Bird());
 
-const input = document.getElementById('input') as HTMLInputElement;
-input.value = 'initial input value';
-(document.getElementById('input') as HTMLInputElement).value =
-  'initial input value';
+// const input = document.getElementById('input') as HTMLInputElement;
+// input.value = 'initial input value';
+// (document.getElementById('input') as HTMLInputElement).value =
+// 'initial input value';
 
 interface Designer {
   name: string;
@@ -85,3 +85,17 @@ const designer: Designer = {
   role: 'afa',
 };
 designer.hoge = 'hoge';
+
+interface DownloadedData {
+  id: number;
+  user?: {
+    name?: {
+      first: string;
+      last: string;
+    };
+  };
+}
+const downloadedData: DownloadedData = {
+  id: 1,
+};
+console.log(downloadedData.user?.name?.first);

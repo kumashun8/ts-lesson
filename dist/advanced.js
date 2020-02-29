@@ -1,4 +1,5 @@
 "use strict";
+var _a, _b;
 const quill = {
     name: 'Quill',
     role: 'front-end',
@@ -8,8 +9,10 @@ function toUpperCase(x) {
     if (typeof x === 'string') {
         return x.toUpperCase();
     }
-    return '';
+    return x;
 }
+const upperHello = toUpperCase('hello');
+upperHello;
 function describeProfile(nomadWorker) {
     console.log(nomadWorker.name);
     if ('role' in nomadWorker) {
@@ -47,5 +50,17 @@ function havePet(pet) {
         default:
             break;
     }
+    if (pet instanceof Bird) {
+        pet.fly();
+    }
 }
 havePet(new Bird());
+const designer = {
+    name: 'Quill',
+    role: 'afa',
+};
+designer.hoge = 'hoge';
+const downloadedData = {
+    id: 1,
+};
+console.log((_b = (_a = downloadedData.user) === null || _a === void 0 ? void 0 : _a.name) === null || _b === void 0 ? void 0 : _b.first);
