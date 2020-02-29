@@ -62,6 +62,16 @@ function AccessLogging(
   console.log(propertyKey);
   console.log(descripter);
 }
+function ParameterLogging(
+  target: any,
+  propertyKey: string,
+  parameterIndex: number
+) {
+  console.log('ParameterLogging');
+  console.log(target);
+  console.log(propertyKey);
+  console.log(parameterIndex);
+}
 
 @Logging('Logging User')
 @Component('<h1>{{ name }}</h1>', '#app')
@@ -81,8 +91,8 @@ class User {
   }
   @enumerable(false)
   @MethodLogging
-  greeting() {
-    console.log('hello');
+  greeting(@ParameterLogging message: string) {
+    console.log(message);
   }
 }
 const user1 = new User(32);
