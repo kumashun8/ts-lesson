@@ -40,12 +40,31 @@ function MethodLogging(target, propertyKey, descripter) {
     console.log(propertyKey);
     console.log(descripter);
 }
+function enumerable(isEnumerable) {
+    return function (_target, _propertyKey, _descripter) {
+        return {
+            enumerable: isEnumerable,
+        };
+    };
+}
+function AccessLogging(target, propertyKey, descripter) {
+    console.log('AccessLogging');
+    console.log(target);
+    console.log(propertyKey);
+    console.log(descripter);
+}
 let User = class User {
-    constructor(age) {
-        this.age = age;
+    constructor(_age) {
+        this._age = _age;
         // static name2 = 'Kite';
         this.name = 'Quill';
         console.log('User was created!');
+    }
+    get age() {
+        return this._age;
+    }
+    set age(value) {
+        this._age = value;
     }
     greeting() {
         console.log('hello');
@@ -55,6 +74,10 @@ __decorate([
     PropertyLogging
 ], User.prototype, "name", void 0);
 __decorate([
+    AccessLogging
+], User.prototype, "age", null);
+__decorate([
+    enumerable(false),
     MethodLogging
 ], User.prototype, "greeting", null);
 User = __decorate([
