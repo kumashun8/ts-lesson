@@ -20,11 +20,17 @@ function describeProfile(nomadWorker) {
     }
 }
 class Dog {
+    constructor() {
+        this.kind = 'dog';
+    }
     speak() {
         console.log('bow-wow');
     }
 }
 class Bird {
+    constructor() {
+        this.kind = 'bird';
+    }
     speak() {
         console.log('tweet-tweet');
     }
@@ -34,15 +40,12 @@ class Bird {
 }
 function havePet(pet) {
     pet.speak();
-    if (pet instanceof Bird) {
-        pet.fly();
+    switch (pet.kind) {
+        case 'bird':
+            pet.fly();
+            break;
+        default:
+            break;
     }
 }
-havePet({
-    speak() {
-        console.log('Hello');
-    },
-    fly() {
-        console.log('hoge');
-    },
-});
+havePet(new Bird());
