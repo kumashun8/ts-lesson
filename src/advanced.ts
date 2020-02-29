@@ -21,14 +21,19 @@ type Mix = NumberBoolean & StringNumber;
 
 function toUpperCase(x: string): string;
 function toUpperCase(x: number): number;
-function toUpperCase(x: string | number) {
+function toUpperCase(x: string | number): string | number {
   if (typeof x === 'string') {
     return x.toUpperCase();
   }
   return x;
 }
-const upperHello = toUpperCase('hello');
-upperHello;
+interface TmpFunc {
+  (x: string): number;
+  (x: number): number;
+}
+const upperHello: TmpFunc = function(x: string | number) {
+  return 0;
+};
 
 type NomadWorker = Engineer | Blogger;
 function describeProfile(nomadWorker: NomadWorker) {
