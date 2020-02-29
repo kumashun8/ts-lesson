@@ -23,7 +23,7 @@ const tmpDeveloper = {
         console.log(message);
     },
 };
-const user = new Developer(38, 3);
+const user = new Developer(38, 3, 'Quill');
 if (user.name) {
     console.log(user.name);
 }
