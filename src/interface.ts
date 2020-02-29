@@ -6,19 +6,24 @@ let addFunc: addFunc;
 addFunc = (n1: number, n2: number) => n1 + n2;
 
 interface Nameable {
-  name: string;
+  name?: string;
+  nickName?: string;
 }
+const nameable: Nameable = {
+  name: 'Quill',
+  nickName: 'Quilla',
+};
 interface Human extends Nameable {
   age: number;
   greeting(message: string): void;
 }
 class Developer implements Human {
   constructor(
-    public name: string,
     public age: number,
-    public experience: number
+    public experience: number,
+    public name?: string
   ) {}
-  greeting(message: string) {
+  greeting(message: string = 'Hello') {
     console.log(message);
   }
 }
@@ -30,4 +35,7 @@ const tmpDeveloper = {
     console.log(message);
   },
 };
-const user: Human = tmpDeveloper;
+const user: Human = new Developer(38, 3, 'Quill');
+if (user.name) {
+  console.log(user.name);
+}
