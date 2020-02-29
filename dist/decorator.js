@@ -17,7 +17,7 @@ function Component(template, selector) {
     return function (constructor) {
         return class extends constructor {
             constructor(...args) {
-                super(args);
+                super(...args);
                 console.log('Component');
                 const mountedElement = document.querySelector(selector);
                 const instance = new constructor();
@@ -29,13 +29,26 @@ function Component(template, selector) {
         };
     };
 }
+console.dir(Logging);
+function PropertyLogging(target, propertyKey) {
+    console.log('PropertyLogging');
+    console.log(target);
+    console.log(propertyKey);
+}
 let User = class User {
     constructor(age) {
         this.age = age;
+        // static name2 = 'Kite';
         this.name = 'Quill';
         console.log('User was created!');
     }
+    greeting() {
+        console.log('hello');
+    }
 };
+__decorate([
+    PropertyLogging
+], User.prototype, "name", void 0);
 User = __decorate([
     Logging('Logging User'),
     Component('<h1>{{ name }}</h1>', '#app')
