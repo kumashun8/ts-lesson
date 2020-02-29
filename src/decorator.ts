@@ -24,11 +24,22 @@ function Component(template: string, selector: string) {
     };
   };
 }
-console.dir(Logging);
+
 function PropertyLogging(target: any, propertyKey: string) {
   console.log('PropertyLogging');
   console.log(target);
   console.log(propertyKey);
+}
+
+function MethodLogging(
+  target: any,
+  propertyKey: string,
+  descripter: PropertyDescriptor
+) {
+  console.log('MethodLogging');
+  console.log(target);
+  console.log(propertyKey);
+  console.log(descripter);
 }
 
 @Logging('Logging User')
@@ -40,6 +51,7 @@ class User {
   constructor(public age: number) {
     console.log('User was created!');
   }
+  @MethodLogging
   greeting() {
     console.log('hello');
   }

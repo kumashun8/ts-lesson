@@ -29,11 +29,16 @@ function Component(template, selector) {
         };
     };
 }
-console.dir(Logging);
 function PropertyLogging(target, propertyKey) {
     console.log('PropertyLogging');
     console.log(target);
     console.log(propertyKey);
+}
+function MethodLogging(target, propertyKey, descripter) {
+    console.log('MethodLogging');
+    console.log(target);
+    console.log(propertyKey);
+    console.log(descripter);
 }
 let User = class User {
     constructor(age) {
@@ -49,6 +54,9 @@ let User = class User {
 __decorate([
     PropertyLogging
 ], User.prototype, "name", void 0);
+__decorate([
+    MethodLogging
+], User.prototype, "greeting", null);
 User = __decorate([
     Logging('Logging User'),
     Component('<h1>{{ name }}</h1>', '#app')
