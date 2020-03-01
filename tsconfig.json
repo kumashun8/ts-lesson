@@ -62,7 +62,7 @@
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
   },
-  "include": ["./src/library.ts", "./src/lodash.d.ts"]
+  "files": ["./src/library.ts", "./src/lodash.d.ts"]
   // "exclude": ["**/compiler.ts", "node_modules"],
   // "files": ["compiler.ts"]
 }
