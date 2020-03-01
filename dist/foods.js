@@ -1,5 +1,5 @@
-"use strict";
-class Foods {
+import { Food } from './food';
+export class Foods {
     constructor() {
         this.elements = document.querySelectorAll('.food');
         this._activeElements = [];
