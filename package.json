@@ -6,6 +6,8 @@
   "author": "8810KMKM <hayato.okuma892@mail.kyutech.jp>",
   "license": "MIT",
   "devDependencies": {
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   },
