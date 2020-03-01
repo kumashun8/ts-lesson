@@ -1,0 +1,15 @@
+{
+  "name": "ts-lesson",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/8810KMKM/ts-lesson.git",
+  "author": "8810KMKM <hayato.okuma892@mail.kyutech.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "build": "webpack"
+  }
+}
