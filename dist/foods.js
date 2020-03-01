@@ -1,4 +1,4 @@
-import { Food } from './food';
+import { Food } from './food.js';
 export class Foods {
     constructor() {
         this.elements = document.querySelectorAll('.food');
