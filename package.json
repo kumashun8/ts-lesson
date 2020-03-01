@@ -6,6 +6,7 @@
   "author": "8810KMKM <hayato.okuma892@mail.kyutech.jp>",
   "license": "MIT",
   "devDependencies": {
+    "@types/lodash": "^4.14.149",
     "clean-webpack-plugin": "^3.0.0",
     "ts-loader": "^6.2.1",
     "typescript": "^3.8.3",
@@ -16,5 +17,9 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --config webpack.dev.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "lodash": "^4.17.15"
   }
 }
