@@ -19,7 +19,7 @@
     "start": "webpack-dev-server --config webpack.dev.js"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "create-react-app": "^3.4.0",
     "lodash": "^4.17.15",
     "react": "^16.13.0",
